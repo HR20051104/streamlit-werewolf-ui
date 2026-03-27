@@ -1,0 +1,6 @@
+
+[llm]
+openai>=1.40.0
+
+[ui]
+streamlit>=1.40.0
