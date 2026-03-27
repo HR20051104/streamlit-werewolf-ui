@@ -1,6 +1,15 @@
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
 import streamlit as st
+
+# Ensure local project packages (game/players/ui/llm/utils) are importable
+# in cloud runtimes where working directory/path behavior can differ.
+ROOT_DIR = Path(__file__).resolve().parents[1]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
 
 from game.config_models import GameConfig, NarrationStyle, TieBreakPolicy, VoteRuleConfig
 from game.engine import GameEngine
