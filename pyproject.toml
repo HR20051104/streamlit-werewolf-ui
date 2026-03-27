@@ -20,7 +20,19 @@ werewolf-cli = "main:main"
 packages = ["game", "players", "ui", "llm", "utils"]
 
 [tool.poetry]
+name = "solo-werewolf-ai"
+version = "0.2.0"
+description = "Single-player Werewolf game with configurable rules and Streamlit UI"
+authors = ["hr20051104 <noreply@example.com>"]
 package-mode = false
+
+packages = [
+    { include = "game" },
+    { include = "players" },
+    { include = "ui" },
+    { include = "llm" },
+    { include = "utils" },
+]
 
 [build-system]
 requires = ["setuptools>=61"]
