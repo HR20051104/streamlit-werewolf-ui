@@ -4,7 +4,10 @@ version = "0.2.0"
 description = "Single-player Werewolf game with configurable rules and Streamlit UI"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "streamlit>=1.40.0",
+    "openai>=1.40.0",
+]
 
 [project.optional-dependencies]
 llm = ["openai>=1.40.0"]
@@ -15,6 +18,9 @@ werewolf-cli = "main:main"
 
 [tool.setuptools]
 packages = ["game", "players", "ui", "llm", "utils"]
+
+[tool.poetry]
+package-mode = false
 
 [build-system]
 requires = ["setuptools>=61"]
